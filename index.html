@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Message Dialog Code Kata</title>
+  <meta http-equiv="Content-Security-Policy"
+  content="
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' https://fonts.googleapis.com  'unsafe-inline';
+    font-src 'self' data: https://fonts.gstatic.com;
+  "/>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+  <!-- Insert Custom Component Html -->
+  
+  <div class="ml">
+    <!-- using custom button webcomponent for the button. -->
+    <custom-button>
+      <span slot="button">Error Example</span>       
+    </custom-button>
+  </div>
+
+  <!-- using the custom modal web component -->
+  <custom-message-dialog>
+    <!-- slot is being used to give the Values in the modal dynamically so that the custom web component can be reused. -->
+    <span slot="title">Lost connection</span> 
+    <div slot="message">This application has experienced a <b>system error</b> due to the lack of internet access.
+      <br>
+      <em>Please</em>
+      restart the application in order to proceed.
+    </div>
+    <button id="close" slot="button-name" class="btn-modal-primary">Restart Now</button>
+  </custom-message-dialog>
+  <div id="overlay"></div>
+ 
+  <script defer  src="../js/custom-button.js"></script>
+  <script defer src="../js/custom-message-dialog.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+

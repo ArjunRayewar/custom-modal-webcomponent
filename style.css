@@ -1,0 +1,42 @@
+
+.overlay{
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.4s;
+    pointer-events: all;
+}
+
+html body{
+    font-family: "source sans pro", helvetica, arial, sans-serif;
+}
+
+.ml{
+    margin-left: 50px;
+    margin-top: 20px
+}
+
+.btn-modal-primary {
+    background-color: transparent;
+    color: #0066D4;
+    transition: color 0.3s ease 0s;
+    border: 1px solid transparent;
+    width: 100%;
+    border-radius: 0;
+    cursor: pointer;
+    float: left;
+    font-size: 15.5px;
+    font-weight: 580;
+    height: 49px;
+    margin-right: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border-left: 1px solid transparent;
+
+}
